@@ -70,3 +70,15 @@ li:first-letter {
 .weather-temperature .fahrenhight {
   text-decoration: none;
 }
+
+.weather-temperature .active {
+  color: #202124;
+  text-decoration: none;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  color: #202124;
+  text-decoration: none;
+  cursor: default;
+}
