@@ -1,13 +1,13 @@
 body {
-  font-family: "Google Sans", arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
   margin-bottom: 0;
-  color: #4d4e51;
+  color: #455d7a;
   display: block;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 28px;
 }
 
@@ -21,9 +21,10 @@ li {
 
   margin: 0;
   padding: 0;
-  color: rgb(112, 117, 122);
-  font-size: 16px;
-  font-weight: 400;
+  color: #455d7a;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 20px;
 }
 
@@ -38,8 +39,9 @@ li:first-letter {
 
 .weather-app {
   padding: 20px;
-  border: 1px solid #cccfd0;
+  border: 0px solid #a0b1c5;
   border-radius: 10px;
+  background: linear-gradient(to bottom, #dfe9f3 0%, #f9fcfe 100%);
 }
 
 .overview {
@@ -54,8 +56,23 @@ li:first-letter {
   vertical-align: top;
 }
 
+.style-form-control {
+  border: 0px solid #d27358;
+  background: #ffffff;
+}
+
+.style-form-control::placeholder {
+  color: #455d7a;
+  opacity: 0.5;
+}
+
+.button-submit {
+  background: #d27358;
+  border: 0px solid #a0b1c5;
+}
+
 .weather-temperature strong {
-  color: #202124;
+  color: #455d7a;
   font-size: 60px;
   font-weight: 400;
   line-height: 1;
@@ -64,22 +81,9 @@ li:first-letter {
 .weather-temperature .units {
   position: relative;
   font-size: 16px;
+  font-weight: 500;
   top: -32px;
-}
-
-.weather-temperature a {
-  text-decoration: none;
-}
-
-.weather-temperature .active {
-  color: #202124;
-
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
-  color: #202124;
-  cursor: default;
+  color: #455d7a;
 }
 
 .weather-forecast {
@@ -89,13 +93,32 @@ li:first-letter {
 
 .weather-forecast-date {
   font-size: 16px;
-  color: #202124;
+  font-weight: 600;
+  color: #455d7a;
 }
 
 .weather-forecast-temperature {
   font-size: 13px;
+  font-weight: 500;
+  color: #455d7a;
 }
 
 .weather-forecast-temperature-min {
-  opacity: 0.6;
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.footer-style {
+  color: #455d7a;
+}
+
+.footer-style a {
+  color: #d27358;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.footer-style a:hover {
+  color: #b34b2f;
+  text-decoration: none;
 }

@@ -63,10 +63,9 @@ function displayForcast(response) {
 }
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "8d77851ee4e661d39914483344a94b0c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+
   axios.get(apiUrl).then(displayForcast);
 }
 
@@ -108,32 +107,7 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
-function dislpayFahrenhighTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celciusLink.classList.remove("active");
-  fahrenhightLink.classList.add("active");
-  let fahrenhighTemperature = Math.round(celciusTemperature * 1.8 + 32);
-  temperatureElement.innerHTML = fahrenhighTemperature;
-}
-
-function dislpayCelciusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
-  celciusLink.classList.add("active");
-  fahrenhightLink.classList.remove("active");
-}
-
-let celciusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenhightLink = document.querySelector("#fahrenhight-link");
-fahrenhightLink.addEventListener("click", dislpayFahrenhighTemperature);
-
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", dislpayCelciusTemperature);
 
 search("Kyiv");
